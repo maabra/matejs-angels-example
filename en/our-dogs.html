@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Dogs — Matej's Angels Kennel</title>
+  <meta name="description" content="Meet our Cavalier King Charles Spaniels, Pomeranians, and our beloved In Memoriam dogs at Matej's Angels Kennel.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="../index.html" class="nav-logo">
+        <img src="../images/index/logo.png" alt="Matej's Angels">
+        <div class="nav-logo-fallback">MA</div>
+        <div class="nav-brand">Matej's Angels <small>Kennel</small></div>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="litters.html">Litters</a></li>
+        <li><a href="our-dogs.html" class="active">Our Dogs</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang-switch">
+          <a href="our-dogs.html" class="active">EN</a>
+          <a href="../hr/nasi-psi.html">HR</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-content">
+
+    <section class="hero" style="min-height:48vh">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-eyebrow">Family &amp; Champions</span>
+        <h1>Our <em>Dogs</em></h1>
+        <p>Each one a beloved family member, each one an ambassador of their breed.</p>
+      </div>
+      <div class="hero-bar"></div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <!-- CAVALIER KING CHARLES SPANIELS -->
+        <div class="breed-section" data-anim>
+          <div class="breed-heading">
+            <div class="breed-heading-line"></div>
+            <h3>Cavalier King Charles Spaniels</h3>
+            <div class="breed-heading-line right"></div>
+          </div>
+          <div class="cards-grid">
+
+            <!-- DOG CARD — Add one block per dog. Duplicate as needed. -->
+            <a href="dogs/dog-bella.html" class="dog-card">
+              <div class="ribbon-wrapper">
+                <div class="dog-card-img-placeholder">🐾</div>
+                <!-- Replace placeholder above with: <img class="dog-card-img" src="../images/dogs/bella/profile.jpg" alt="Bella"> -->
+              </div>
+              <div class="dog-card-body">
+                <p class="dog-card-breed">Cavalier King Charles Spaniel</p>
+                <h4 class="dog-card-name">Matej's Angels Beautiful Bella</h4>
+                <p class="dog-card-call">"Bella"</p>
+                <div class="dog-card-meta">
+                  <span>♀ Female</span>
+                  <span>Blenheim</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Duplicate this card for each additional CKCS dog -->
+            <a href="#" class="dog-card">
+              <div class="dog-card-img-placeholder">🐾</div>
+              <div class="dog-card-body">
+                <p class="dog-card-breed">Cavalier King Charles Spaniel</p>
+                <h4 class="dog-card-name">Add Dog Name Here</h4>
+                <p class="dog-card-call">"Call Name"</p>
+                <div class="dog-card-meta"><span>♂/♀</span><span>Colour</span></div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- POMERANIANS -->
+        <div class="breed-section" data-anim>
+          <div class="breed-heading">
+            <div class="breed-heading-line"></div>
+            <h3>Pomeranians</h3>
+            <div class="breed-heading-line right"></div>
+          </div>
+          <div class="cards-grid">
+
+            <a href="dogs/dog-luna.html" class="dog-card">
+              <div class="ribbon-wrapper">
+                <div class="dog-card-img-placeholder">⭐</div>
+                <!-- Replace: <img class="dog-card-img" src="../images/dogs/luna/profile.jpg" alt="Luna"> -->
+              </div>
+              <div class="dog-card-body">
+                <p class="dog-card-breed">Pomeranian</p>
+                <h4 class="dog-card-name">Matej's Angels Lunar Eclipse</h4>
+                <p class="dog-card-call">"Luna"</p>
+                <div class="dog-card-meta"><span>♀ Female</span><span>White</span></div>
+              </div>
+            </a>
+
+            <!-- Duplicate for additional Pomeranians -->
+            <a href="#" class="dog-card">
+              <div class="dog-card-img-placeholder">⭐</div>
+              <div class="dog-card-body">
+                <p class="dog-card-breed">Pomeranian</p>
+                <h4 class="dog-card-name">Add Dog Name Here</h4>
+                <p class="dog-card-call">"Call Name"</p>
+                <div class="dog-card-meta"><span>♂/♀</span><span>Colour</span></div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- IN MEMORIAM -->
+        <div class="breed-section" data-anim>
+          <div class="breed-heading">
+            <div class="breed-heading-line" style="background:linear-gradient(90deg,rgba(139,26,26,0.4),transparent)"></div>
+            <h3 style="color:var(--cream-dark)">In Memoriam</h3>
+            <div class="breed-heading-line right" style="background:linear-gradient(90deg,transparent,rgba(139,26,26,0.4))"></div>
+          </div>
+          <p style="text-align:center;margin-bottom:2rem;font-family:var(--font-serif);font-style:italic;color:var(--text-muted)">
+            Forever in our hearts. These cherished souls shaped who we are.
+          </p>
+          <div class="cards-grid">
+
+            <a href="dogs/dog-angel.html" class="dog-card">
+              <div class="ribbon-wrapper memoriam">
+                <div class="dog-card-img-placeholder" style="background:var(--navy-light);opacity:0.7">🕊️</div>
+                <!-- Replace: <img class="dog-card-img" src="../images/dogs/angel/profile.jpg" alt="Angel"> -->
+              </div>
+              <div class="dog-card-body">
+                <p class="dog-card-breed">Cavalier King Charles Spaniel</p>
+                <h4 class="dog-card-name">Matej's Angels Heaven Sent</h4>
+                <p class="dog-card-call">"Angel"</p>
+                <div class="dog-card-meta"><span>♀ Female</span><span>Tricolour</span><span style="color:var(--text-muted);font-style:italic">2018 – 2024</span></div>
+              </div>
+            </a>
+
+            <!-- Duplicate for additional In Memoriam dogs -->
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="brand-name">Matej's Angels <small>Kennel</small></span>
+            <p>A royal kennel for Cavalier King Charles Spaniels and Pomeranians, based in Croatia.</p>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Facebook">f</a>
+              <a href="#" class="social-link" aria-label="Instagram">&#9650;</a>
+            </div>
+          </div>
+          <div class="footer-col"><h5>Pages</h5><ul><li><a href="about.html">About Us</a></li><li><a href="litters.html">Litters</a></li><li><a href="our-dogs.html">Our Dogs</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
+          <div class="footer-col"><h5>More</h5><ul><li><a href="blog.html">Blog</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li><li><a href="../hr/nasi-psi.html">🇭🇷 Hrvatski</a></li></ul></div>
+          <div class="footer-col"><h5>Contact</h5><ul><li><a href="mailto:info@matejsangels.com">info@matejsangels.com</a></li></ul></div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Matej's Angels Kennel. All rights reserved.</p>
+          <p>Made with ♥ for dogs</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
