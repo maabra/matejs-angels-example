@@ -424,3 +424,85 @@ Izvorni brojevi rodovnicaCMKU 16553/19
 Upisan03. 08. 2020.
 Rodovnica
 Broj rodovniceHR 11432 KKS
+
+
+RED CORAL NANCY SINATRA
+Aktivan
+Cavalier King Charles španijelŽenka14. 02. 2017.
+Osnovni podaci
+PasminaCavalier King Charles španijel
+Oštenjen14. 02. 2017.
+DlakaDUGA
+Ocjenavrlo dobar
+Dužina repaNema podataka
+Visina (cm)N/A
+SpolŽenka
+Broj mikročipaN/A
+BojaBLENHEIM
+Izvorni brojevi rodovnicaN/A
+Upisan11. 04. 2017.
+Rodovnica
+Broj rodovniceHR 11140 KKS
+ID
+	
+Spol
+	
+Ime
+	
+Pasmina
+	
+Datum oštenjenja
+	
+Broj rodovnice
+	
+Broj mikročipa
+502655	Ženka	MATEJ'S ANGELS Gita	
+Cavalier King Charles španijel
+	09. 01. 2026.	
+HR 11930 KKS
+	191100002356152
+497186	Mužjak	MATEJ'S ANGELS DALI	
+Cavalier King Charles španijel
+	15. 03. 2023.	
+HR 11733 KKS
+	191100002255263
+496623	Mužjak	VERFESTER VELIKOLEPNIY	
+Njemački špic - patuljasti
+	25. 02. 2018.	
+HR 10887 POM
+	
+488334	Ženka	KYRA'S PAWS KIMMY	
+Njemački špic - patuljasti
+	14. 02. 2025.	
+HR 12633 POM
+	191100002324549
+468791	Ženka	VERDURAS MALCRIADO DE LA CASA	
+Cavalier King Charles španijel
+	20. 10. 2023.	
+HR 11803 KKS
+	953010006781300
+442024	Ženka	KINGDOM OF SOUL'S MERCEDES	
+Njemački špic - patuljasti
+	02. 05. 2022.	
+HR 11795 POM
+	
+432036	Ženka	ARIA MATEJ'S ANGELS	
+Cavalier King Charles španijel
+	26. 08. 2021.	
+HR 11551 KKS
+	191100002206160
+421776	Ženka	OLLEMUAR IMPERIAL VALETTA	
+Njemački špic - patuljasti
+	03. 05. 2020.	
+HR 11407 POM
+	
+409460	Ženka	OLEA MALCRIADO DE LA CASA	
+Cavalier King Charles španijel
+	04. 04. 2019.	
+HR 11432 KKS
+	203098100438851
+360297	Ženka	RED CORAL NANCY SINATRA	
+Cavalier King Charles španijel
+	14. 02. 2017.	
+HR 11140 KKS
+	

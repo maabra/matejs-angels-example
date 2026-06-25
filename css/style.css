@@ -260,6 +260,8 @@ em { font-style: italic; }
 }
 .hamburger {
   display: none;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   gap: 5px;
   padding: 8px 6px;
@@ -1583,6 +1585,8 @@ em { font-style: italic; }
     display: none;
     position: fixed;
     top: 72px; left: 0; right: 0;
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
     background: rgba(13,27,42,0.98);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--gold-muted);
@@ -1592,7 +1596,7 @@ em { font-style: italic; }
     z-index: 999;
   }
   .nav-links.open { display: flex; }
-  .nav-links a { padding: 0.85rem 1rem; width: 100%; }
+  .nav-links a { padding: 0.85rem 1rem; width: 100%; white-space: normal; }
   .hamburger { display: flex; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .parents-row { grid-template-columns: 1fr; }
