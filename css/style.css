@@ -1146,15 +1146,24 @@ em { font-style: italic; }
 }
 .tab-btn:hover { color: var(--cream); }
 .tab-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
-.tab-panel { display: none; }
-.tab-panel.active { display: block; animation: fadeIn 0.3s ease-out; }
+.tab-panel { display: none; overflow-x: hidden; }
+.tab-panel.active { display: block; animation: fadeIn 0.3s ease-out; overflow-x: auto; }
 
 /* ---- PEDIGREE ---- */
 .pedigree-table {
   width: 100%;
+  max-width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
   font-size: 0.88rem;
   margin-top: 1rem;
+  min-width: 520px;
+}
+.pedigree-table th,
+.pedigree-table td {
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
 }
 .pedigree-table th {
   background: var(--navy-mid);
@@ -1164,7 +1173,6 @@ em { font-style: italic; }
   padding: 0.75rem 1rem;
   text-align: left;
   border: 1px solid var(--gold-muted);
-  white-space: nowrap;
 }
 .pedigree-table td {
   padding: 0.65rem 1rem;
@@ -1630,6 +1638,17 @@ em { font-style: italic; }
   .footer-bottom { flex-direction: column; text-align: center; }
   .litter-header-inner { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
   .health-grid { grid-template-columns: repeat(2, 1fr); }
+  .pedigree-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-left: -1.75rem;
+    margin-right: -1.75rem;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+  .pedigree-wrapper .pedigree-table {
+    min-width: 620px;
+  }
 }
 
 @media (max-width: 420px) {
