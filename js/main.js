@@ -156,9 +156,36 @@
 
       btn.classList.add('active');
       const panel = group.querySelector(`#tab-${target}`);
-      if (panel) panel.classList.add('active');
+      if (panel) {
+        panel.classList.add('active');
+        requestAnimationFrame(() => panel.querySelectorAll('.ped-outer').forEach(setupPedHint));
+      }
     });
   });
+})();
+
+/* ---- PEDIGREE SCROLL HINT ---- */
+function setupPedHint(el) {
+  if (el.parentNode.classList.contains('ped-scroll-wrap')) return;
+  if (el.scrollWidth <= el.clientWidth + 1) return;
+
+  const wrap = document.createElement('div');
+  wrap.className = 'ped-scroll-wrap';
+  el.parentNode.insertBefore(wrap, el);
+  wrap.appendChild(el);
+
+  const hint = document.createElement('div');
+  hint.className = 'ped-scroll-hint';
+  hint.setAttribute('aria-hidden', 'true');
+  wrap.appendChild(hint);
+
+  el.addEventListener('scroll', () => {
+    hint.style.opacity = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4 ? '0' : '1';
+  }, { passive: true });
+}
+
+(function () {
+  requestAnimationFrame(() => document.querySelectorAll('.ped-outer').forEach(setupPedHint));
 })();
 
 /* ---- SCROLL ANIMATIONS ---- */

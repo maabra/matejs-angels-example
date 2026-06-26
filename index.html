@@ -1,56 +1,214 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matej's Angels Kennel</title>
-  <link rel="icon" type="image/png" href="/images/index/logo.png">
-  <meta name="description" content="Royal kennel for Cavalier King Charles Spaniels and Pomeranians. Breeding with love, passion, and excellence.">
-  <link rel="stylesheet" href="css/style.css">
+  <title>Matej's Angels - Uzgajivačnica</title>
 
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Matej's Angels Kennel">
-  <meta property="og:title" content="Matej's Angels Kennel">
-  <meta property="og:description" content="Matej's Angels is a royal kennel for Cavalier King Charles Spaniels and Pomeranians, based in Premantura, Istria, Croatia.">
-  <meta property="og:image" content="https://matejsangels.com/images/index/logo.png">
-  <meta property="og:url" content="https://matejsangels.com/">
+  <link rel="icon" type="image/png" href="/images/index/favicon.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/index/logo.png">
+  <meta name="description" content="Saznajte više o uzgajivačnici Matej's Angels - naša priča, strast i predanost uzgoju iznimnih Cavalier King Charles španijela i Pomeranaca.">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <main class="index-hero">
-
-    <div class="index-logo-wrap">
-      <!-- Replace logo.png with your actual logo file -->
-      <img src="images/index/logotransparent.png" alt="Matej's Angels Kennel Logo"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-      <div class="logo-placeholder-large" style="display:none">
-        <span>MA</span>
+  <!-- Language selection popup -->
+  <div class="lang-popup-overlay" id="langPopup" role="dialog" aria-modal="true" aria-label="Odabir jezika">
+    <div class="lang-popup">
+      <button class="lang-popup-close" id="langPopupX" aria-label="Zatvori">&times;</button>
+      <div class="index-logo-wrap">
+        <img src="images/index/logotransparent.png" alt="Matej's Angels Kennel Logo"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="logo-placeholder-large" style="display:none"><span>MA</span></div>
+        <h1 class="index-kennel-name">Matej's <em>Angels</em></h1>
+        <p class="index-tagline">Royal Kennel · Cavalier King Charles Spaniels &amp; Pomeranians</p>
+        <div class="gold-divider"><span>✦</span></div>
+        <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:2rem;">Molimo odaberite jezik · Please select your language</p>
       </div>
-
-      <h1 class="index-kennel-name">Matej's <em>Angels</em></h1>
-      <p class="index-tagline">Royal Kennel · Cavalier King Charles Spaniels &amp; Pomeranians</p>
-
-      <div class="gold-divider"><span>✦</span></div>
-
-      <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:2rem;">Please select your language · Molimo odaberite jezik</p>
+      <div class="lang-cards">
+        <a href="en/about.html" class="lang-card">
+          <div class="lang-card-flag">🇬🇧</div>
+          <span class="lang-card-label">English</span>
+          <span class="lang-card-sub">Enter the English site</span>
+        </a>
+        <a href="hr/o-nama.html" class="lang-card">
+          <div class="lang-card-flag">🇭🇷</div>
+          <span class="lang-card-label">Hrvatski</span>
+          <span class="lang-card-sub">Uđi na hrvatsku stranicu</span>
+        </a>
+      </div>
     </div>
+  </div>
 
-    <div class="lang-cards">
-      <a href="en/about.html" class="lang-card">
-        <div class="lang-card-flag">🇬🇧</div>
-        <span class="lang-card-label">English</span>
-        <span class="lang-card-sub">Enter the English site</span>
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/index/logo.png" alt="Matej's Angels">
+        <div class="nav-logo-fallback">MA</div>
+        <div class="nav-brand">Matej's Angels <small>Uzgajivačnica</small></div>
       </a>
-      <a href="hr/o-nama.html" class="lang-card">
-        <div class="lang-card-flag">🇭🇷</div>
-        <span class="lang-card-label">Hrvatski</span>
-        <span class="lang-card-sub">Uđi na hrvatsku stranicu</span>
-      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active">O nama</a></li>
+        <li><a href="hr/legla.html">Legla</a></li>
+        <li><a href="hr/kronologija.html">Kronologija</a></li>
+        <li><a href="hr/nasi-psi.html">Naši psi</a></li>
+        <li><a href="hr/galerija.html">Galerija</a></li>
+        <li><a href="hr/vijesti.html">Vijesti</a></li>
+        <li><a href="hr/faq.html">FAQ</a></li>
+        <li><a href="hr/kontakt.html">Kontakt</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang-switch">
+          <a href="en/about.html">EN</a>
+          <a href="index.html" class="active">HR</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Izbornik" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
+  </nav>
 
-  </main>
+  <div class="page-content">
+
+    <section class="hero" style="min-height:55vh">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-eyebrow">Naša priča</span>
+        <h1>O <em>Matej's Angels</em></h1>
+        <p>Obiteljska uzgajivačnica temeljena na ljubavi, predanosti i nepopustljivoj posvećenosti najboljim uzgojnim standardima.</p>
+      </div>
+      <div class="hero-bar"></div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center" data-anim>
+          <div>
+            <span class="hero-eyebrow" style="font-size:0.7rem">Dobrodošli</span>
+            <h2>Naša uzgajivačnica,<br>naša strast</h2>
+            <div class="gold-divider" style="margin:1rem 0 1.5rem;max-width:200px;"><span>✦</span></div>
+            <p>Matej's Angels je mala, obiteljska uzgajivačnica smještena u Hrvatskoj, posvećena uzgoju Cavalier King Charles španijela i Pomeranaca najviše kvalitete. Svaki pas u našoj skrbi odgaja se kao član obitelji; voljen, njegovan i socijaliziran od prvog dana.</p>
+            <p style="margin-top:1rem">Naš cilj nije količina nego kvaliteta; zdravi, dobrog temperamenta, lijepi psi koji donose radost svojim obiteljima i s ponosom predstavljaju svoju pasminu na izložbama.</p>
+            <a href="hr/nasi-psi.html" class="btn btn-outline mt-4">Upoznajte naše pse</a>
+          </div>
+          <div style="border-radius:14px;overflow:hidden;aspect-ratio:4/3">
+            <img src="images/gallery/20260405_204945_preview_rev_2.png" alt="Uzgajivačnica Matej's Angels" style="width:100%;height:100%;object-fit:cover;display:block">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-mid">
+      <div class="container">
+        <div class="section-header" data-anim>
+          <h2>Naša načela</h2>
+          <p class="subtitle">Principi koji vode sve što radimo</p>
+          <div class="gold-divider"><span>✦</span></div>
+        </div>
+        <div class="cards-grid" style="gap:1.5rem">
+          <div class="dog-card" style="padding:2rem" data-anim>
+            <h4 style="color:var(--gold);margin-bottom:0.5rem">Zdravlje na prvom mjestu</h4>
+            <p>Svi naši rasplodni psi prolaze sveobuhvatna zdravstvena testiranja prema zahtjevima pasminskih klubova. Testiramo MVD, SM/CM, oči, kukove i genetske markere relevantne za svaku pasminu.</p>
+          </div>
+          <div class="dog-card" style="padding:2rem" data-anim>
+            <h4 style="color:var(--gold);margin-bottom:0.5rem">Odgajani s ljubavlju</h4>
+            <p>Naši štenci odrastaju u našem domu, potpuno socijalizirani s djecom, drugim psima i svakodnevnim zvukovima. Svakodnevno se rukuju, izlažu se obogaćivanju i spremni su za svaki ljubeći dom.</p>
+          </div>
+          <div class="dog-card" style="padding:2rem" data-anim>
+            <h4 style="color:var(--gold);margin-bottom:0.5rem">Izložbena izvrsnost</h4>
+            <p>Uzgajamo prema FCI standardu i redovito izlažemo na nacionalnim i međunarodnim izložbama pasa. Naši psi zaradili su naslove diljem Europe, dokazujući da ljepota i zdravlje idu ruku pod ruku.</p>
+          </div>
+          <div class="dog-card" style="padding:2rem" data-anim>
+            <h4 style="color:var(--gold);margin-bottom:0.5rem">Doživotna podrška</h4>
+            <p>Kada od nas uzmete štenad, postajemo vaš partner za cijeli život. Nudimo savjete o prehrani, njezi, dresuri i zdravlju kroz cijeli život vašeg psa.</p>
+          </div>
+          <div class="dog-card" style="padding:2rem" data-anim>
+            <h4 style="color:var(--gold);margin-bottom:0.5rem">Etički uzgoj</h4>
+            <p>Svako leglo pažljivo planiramo, biramo samo provjerene, zdravstveno testirane roditelje i nikada ne uzgajamo radi količine. Svako štene smještamo u brižno odabranu, ljubeću obitelj.</p>
+          </div>
+          <div class="dog-card" style="padding:2rem" data-anim>
+            <h4 style="color:var(--gold);margin-bottom:0.5rem">Zajednica</h4>
+            <p>Ponosni smo članovi Hrvatskog kinološkog saveza (HKS) i odgovarajućih pasminskih klubova. Vjerujemo u dijeljenju znanja i doprinos poboljšanju naših pasmina.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header" data-anim>
+          <h2>Naše pasmine</h2>
+          <p class="subtitle">Dvije izvanredne pasmine, jedan zajednički standard izvrsnosti</p>
+          <div class="gold-divider"><span>✦</span></div>
+        </div>
+        <div class="cards-grid-2" style="max-width:900px;margin-left:auto;margin-right:auto">
+          <div style="background:var(--navy-mid);border:1px solid var(--gold-muted);border-radius:14px;overflow:hidden" data-anim>
+            <div style="background:linear-gradient(135deg,var(--gold),var(--gold-dark));padding:2rem;text-align:center">
+              <h3 style="color:var(--navy);margin:0">Cavalier King Charles španijel</h3>
+            </div>
+            <div style="padding:1.75rem">
+              <p>Jedna od najomiljenijih toy pasmina na svijetu, Cavalier kombinira gracioznost izložbenog psa s nježnom, privrženošću pravog pratitelja. Poznati su po dubokim očima, svilenkastoj dlaci i nepopustljivoj ljubavi prema obitelji.</p>
+              <p style="margin-top:1rem">U Matej's Angels, naši Cavalieri dolaze u sve četiri priznate boje: Blenheim, Trikolora, Crno i smeđe i Ruby; svaki nosi prepoznatljivo nježan karakter pasmine.</p>
+              <a href="hr/nasi-psi.html" class="btn btn-outline mt-3 btn-sm">Pogledaj naše Cavaliere</a>
+            </div>
+          </div>
+          <div style="background:var(--navy-mid);border:1px solid var(--gold-muted);border-radius:14px;overflow:hidden" data-anim>
+            <div style="background:linear-gradient(135deg,var(--navy-light),var(--navy-mid));border-bottom:2px solid var(--gold);padding:2rem;text-align:center">
+              <h3 style="color:var(--gold);margin:0">Pomeranian</h3>
+            </div>
+            <div style="padding:1.75rem">
+              <p>Smjeli, živahni duh u malenom, veličanstvenom pakiranju. Pomeranci osvajaju bujnim dvostrukim kaputom, lisičjim izrazom lica i ličnošću koja je veća od samog psa. Inteligentni, radoznali i beskrajno šarmantni.</p>
+              <p style="margin-top:1rem">Naši Pomeranci predstavljaju različite boje i uzgajani su za ispravni tip, kompaktno tijelo i karakterističan jasan, budan izraz koji pasmina slavi diljem svijeta.</p>
+              <a href="hr/nasi-psi.html" class="btn btn-outline mt-3 btn-sm">Pogledaj naše Pomeranie</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="brand-name">Matej's Angels <small>Uzgajivačnica</small></span>
+            <p>Kraljevska uzgajivačnica Cavalier King Charles španijela i Pomeranaca, smještena u Hrvatskoj. Uzgoj s ljubavlju, strašću i izvrsnoću.</p>
+            <div class="social-links"><a href="https://www.facebook.com/matejsangels/" class="social-link" target="_blank" rel="noopener noreferrer">f</a><a href="#" class="social-link">&#9650;</a></div>
+          </div>
+          <div class="footer-col"><h5>Stranice</h5><ul><li><a href="index.html">O nama</a></li><li><a href="hr/legla.html">Legla</a></li>
+        <li><a href="hr/kronologija.html">Kronologija</a></li><li><a href="hr/nasi-psi.html">Naši psi</a></li><li><a href="hr/galerija.html">Galerija</a></li></ul></div>
+          <div class="footer-col"><h5>Više</h5><ul><li><a href="hr/vijesti.html">Vijesti</a></li><li><a href="hr/faq.html">FAQ</a></li><li><a href="hr/kontakt.html">Kontakt</a></li><li><a href="en/about.html">🇬🇧 English</a></li></ul></div>
+          <div class="footer-col"><h5>Kontakt</h5><ul><li><a href="mailto:info@matejsangels.com">info@matejsangels.com</a></li><li><a href="hr/kontakt.html">Hrvatska</a></li></ul></div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Matej's Angels Kennel. Sva prava pridržana.</p>
+          <p>Rađeno s ♥ za pse</p>
+        </div>
+      </div>
+    </footer>
+  </div>
 
   <script src="js/main.js"></script>
+  <script>
+    (function () {
+      var overlay = document.getElementById('langPopup');
+      var xBtn = document.getElementById('langPopupX');
+
+      function closePopup() {
+        overlay.classList.add('hiding');
+        overlay.addEventListener('animationend', function () {
+          overlay.style.display = 'none';
+        }, { once: true });
+      }
+
+      xBtn.addEventListener('click', closePopup);
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) closePopup();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closePopup();
+      });
+    })();
+  </script>
 </body>
 </html>
-
