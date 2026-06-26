@@ -1023,6 +1023,8 @@ em { font-style: italic; }
   padding: 3.5rem 0;
 }
 .dog-profile-sidebar { position: sticky; top: 88px; }
+/* Prevent the wide pedigree tree from expanding the grid column beyond 1fr */
+.dog-profile-grid > div { min-width: 0; }
 .dog-img-frame {
   position: relative;
   border-radius: var(--radius-md);
@@ -1148,6 +1150,17 @@ em { font-style: italic; }
 .tab-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
 .tab-panel { display: none; overflow-x: hidden; }
 .tab-panel.active { display: block; animation: fadeIn 0.3s ease-out; overflow-x: auto; }
+
+/* ---- PEDIGREE SCROLL HINT ---- */
+.ped-scroll-wrap { position: relative; }
+.ped-scroll-hint {
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: 72px;
+  background: linear-gradient(to right, transparent, rgba(5, 10, 18, 0.78));
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
 
 /* ---- PEDIGREE ---- */
 .pedigree-table {
