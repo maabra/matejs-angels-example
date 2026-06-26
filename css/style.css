@@ -148,12 +148,15 @@ em { font-style: italic; }
   display: flex;
   align-items: center;
   padding: 0 1.75rem;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
 }
 .navbar.scrolled {
   background: rgba(13, 27, 42, 0.97);
   box-shadow: var(--shadow-md);
+  height: 58px;
 }
+.navbar.scrolled .nav-logo img,
+.navbar.scrolled .nav-logo-fallback { height: 36px; width: 36px; }
 .navbar-inner {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -1594,6 +1597,7 @@ em { font-style: italic; }
 }
 
 @media (max-width: 860px) {
+  .navbar.scrolled #nav-links { top: 58px; }
   .nav-links {
     display: none;
     position: fixed;
@@ -1656,3 +1660,88 @@ em { font-style: italic; }
   .lang-card { width: 100%; max-width: 260px; }
   .hero-actions { flex-direction: column; align-items: center; }
 }
+
+/* ================================================================
+   QoL ENHANCEMENTS
+   ================================================================ */
+
+/* ---- BACK TO TOP BUTTON ---- */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 998;
+  width: 44px;
+  height: 44px;
+  background: var(--gold);
+  color: var(--navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease;
+  pointer-events: none;
+  border: none;
+  cursor: pointer;
+}
+.back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.back-to-top:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+/* ---- COPY EMAIL BUTTON ---- */
+.copy-email-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.4rem;
+  padding: 0.15rem 0.3rem;
+  color: var(--text-muted);
+  border-radius: var(--radius-xs);
+  transition: color 0.2s, background 0.2s;
+  vertical-align: middle;
+  line-height: 1;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.copy-email-btn:hover { color: var(--gold); background: var(--gold-glow); }
+
+/* ---- COPY TOAST ---- */
+.copy-toast {
+  position: fixed;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: var(--navy-mid);
+  border: 1px solid var(--gold-muted);
+  color: var(--cream);
+  padding: 0.55rem 1.2rem;
+  border-radius: var(--radius-md);
+  font-size: 0.84rem;
+  z-index: 10000;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: var(--shadow-md);
+}
+.copy-toast.visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* ---- WHATSAPP LINK ---- */
+.wa-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.25rem;
+  font-size: 0.82rem;
+  color: #25D366;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+.wa-link:hover { opacity: 0.75; }
