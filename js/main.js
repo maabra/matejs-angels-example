@@ -274,6 +274,156 @@ document.querySelectorAll('.nav-logo img, .index-logo-wrap img').forEach(img => 
   btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 })();
 
+/* ---- KONAMI CODE: SECRET ZYWOO EASTER EGG ---- */
+(function () {
+  const KONAMI = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
+  let idx = 0;
+  let activated = false;
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === KONAMI[idx]) {
+      idx++;
+      if (idx === KONAMI.length) {
+        idx = 0;
+        if (!activated) {
+          activated = true;
+          activateZywoo();
+        }
+      }
+    } else {
+      idx = (e.key === KONAMI[0]) ? 1 : 0;
+    }
+  });
+
+  function activateZywoo() {
+    launchConfetti();
+
+    const card = document.getElementById('zywoo-card');
+    if (card) {
+      card.style.display = '';
+      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      card.style.opacity = '0';
+      card.style.transform = 'scale(0.8) rotate(-3deg)';
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          card.style.opacity = '1';
+          card.style.transform = 'scale(1) rotate(0deg)';
+          setTimeout(function () {
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 200);
+        });
+      });
+    }
+
+    const toast = document.createElement('div');
+    toast.style.cssText = [
+      'position:fixed',
+      'top:50%',
+      'left:50%',
+      'transform:translate(-50%,-60%) scale(0.8)',
+      'z-index:99999',
+      'background:#0D1B2A',
+      'border:2px solid #FFE500',
+      'border-radius:14px',
+      'padding:1.75rem 2.25rem',
+      'text-align:center',
+      'color:#FFE500',
+      'font-family:Georgia,serif',
+      'box-shadow:0 0 60px rgba(255,229,0,0.25),0 20px 60px rgba(0,0,0,0.5)',
+      'pointer-events:none',
+      'transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1),opacity 0.4s ease',
+      'opacity:0',
+      'min-width:260px',
+    ].join(';');
+    toast.innerHTML = [
+      '<div style="font-size:2.8rem;line-height:1">🎮</div>',
+      '<div style="font-size:1.5rem;font-weight:bold;margin:0.5rem 0;letter-spacing:0.03em">🐕 WOOF! 🐕</div>',
+      '<div style="font-size:1rem;color:#fff">You found the secret dog!</div>',
+      '<div style="font-size:0.78rem;color:rgba(255,229,0,0.6);margin-top:0.5rem">ZywOo has joined the kennel</div>',
+    ].join('');
+    document.body.appendChild(toast);
+
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        toast.style.transform = 'translate(-50%,-50%) scale(1)';
+        toast.style.opacity = '1';
+      });
+    });
+
+    setTimeout(function () {
+      toast.style.transform = 'translate(-50%,-50%) scale(0.9)';
+      toast.style.opacity = '0';
+      setTimeout(function () { toast.remove(); }, 400);
+    }, 3200);
+  }
+
+  function launchConfetti() {
+    var canvas = document.createElement('canvas');
+    canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:99998';
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    document.body.appendChild(canvas);
+
+    var ctx = canvas.getContext('2d');
+    var colors = ['#FFE500','#D4AF37','#00A3E0','#FFFFFF','#FF6B35','#A8D8EA','#69f0ae','#ce93d8'];
+    var particles = [];
+
+    for (var i = 0; i < 180; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height * 0.5 - canvas.height * 0.3,
+        w: Math.random() * 11 + 5,
+        h: Math.random() * 6 + 3,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        rot: Math.random() * Math.PI * 2,
+        rotSpeed: (Math.random() - 0.5) * 0.18,
+        vx: (Math.random() - 0.5) * 2.5,
+        vy: Math.random() * 3.5 + 1.5,
+        alpha: 1,
+      });
+    }
+
+    var start = Date.now();
+    var duration = 2500;
+    var frame;
+
+    function draw() {
+      var elapsed = Date.now() - start;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      particles.forEach(function (p) {
+        ctx.save();
+        ctx.globalAlpha = p.alpha;
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rot);
+        ctx.fillStyle = p.color;
+        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+        ctx.restore();
+        p.x += p.vx;
+        p.y += p.vy;
+        p.rot += p.rotSpeed;
+        if (elapsed > duration * 0.6) {
+          p.alpha = Math.max(0, p.alpha - 0.012);
+        }
+        if (p.y > canvas.height + 20) {
+          p.y = -20;
+          p.x = Math.random() * canvas.width;
+          p.alpha = 1;
+        }
+      });
+
+      if (elapsed < duration) {
+        frame = requestAnimationFrame(draw);
+      } else {
+        canvas.style.transition = 'opacity 0.8s';
+        canvas.style.opacity = '0';
+        setTimeout(function () { canvas.remove(); }, 800);
+      }
+    }
+    draw();
+  }
+})();
+
 /* ---- COPYRIGHT YEAR AUTO-UPDATE ---- */
 (function () {
   const year = new Date().getFullYear();
