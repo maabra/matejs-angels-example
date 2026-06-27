@@ -1,4 +1,4 @@
-/* ================================================================
+﻿/* ================================================================
    MATEJ'S ANGELS KENNEL — Royal Design System
    Palette: Deep Navy · Royal Gold · Ivory Cream
    ================================================================ */
@@ -780,6 +780,7 @@ em { font-style: italic; }
   opacity: 0.75;
   display: block;
   margin-top: 0.25rem;
+  margin-left: 0.5rem;
 }
 .litter-card-body { padding: 1.3rem 1.35rem 1.4rem; }
 .litter-card-date { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.3rem; }
@@ -1592,7 +1593,7 @@ em { font-style: italic; }
   flex-wrap: wrap;
   gap: 0.5rem;
 }
-.footer-bottom p { font-size: 0.78rem; color: var(--text-muted); }
+.footer-bottom p { font-size: 0.78rem; color: var(--cream-muted); }
 .footer-bottom a { color: var(--gold); }
 
 /* ---- BREADCRUMB ---- */
@@ -1957,6 +1958,7 @@ em { font-style: italic; }
   align-items: center;
   gap: 0.3rem;
   margin-top: 0.25rem;
+  margin-left: 0.5rem;
   font-size: 0.82rem;
   color: #25D366;
   text-decoration: none;
