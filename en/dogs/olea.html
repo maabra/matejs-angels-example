@@ -1,4 +1,4 @@
-!DOCTYPE html>
+﻿!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -97,8 +97,8 @@
             <div class="dog-info-header">
               <span class="dog-breed-tag">Cavalier King Charles Spaniel</span>
               <h1 class="dog-full-name">Olea Malcriado de la Casa</h1>
-              <p class="dog-call-name">"Olea" (Lexi)</p>
-              <p style="margin-top:1rem;color:var(--cream-dark)">A beautiful Blenheim Cavalier female, Olea (Lexi) brought Czech and French champion bloodlines to the kennel. She passed away in 2023, but her spirit remains forever in our story.</p>
+              <p class="dog-call-name">"Lexa"</p>
+              <p style="margin-top:1rem;color:var(--cream-dark)">A beautiful Blenheim Cavalier female, Lexa brought Czech and French champion bloodlines to the kennel. She passed away in 2023, but her spirit remains forever in our story.</p>
             </div>
 
             <div class="dog-tabs">
@@ -246,7 +246,7 @@
                       <div class="ped-conn"><div class="ped-conn-l"><div class="ped-conn-l-line"></div></div><div class="ped-conn-r"></div></div>
                     </div>
                     <div class="ped-children">
-                      <div class="ped-entry"><div class="ped-entry-inner"><div class="ped-card"><div class="ped-card-role">Great-grandfather</div><div class="ped-card-name">PERCIVAL TWAI Z CISARSKEHO MLYNA</div><div class="ped-card-reg">CMKU 7228/03/05</div></div><div class="ped-conn"><div class="ped-conn-l"><div class="ped-conn-l-line"></div></div><div class="ped-conn-r"></div></div></div><div class="ped-children"><div class="ped-leaf"><div class="ped-card"><div class="ped-card-role">GG-grandfather</div><div class="ped-card-name">STONEHILL'S WEST SIDE STORY</div><div class="ped-card-reg">SHSB/LOS 565823 (CMKU/CKC/4599/-98/98/99)</div><div class="ped-card-detail">2xCAC CZ</div></div></div><div class="ped-leaf"><div class="ped-card"><div class="ped-card-role">GG-grandmother</div><div class="ped-card-name">AWARA TWAI Z CÍSAŘSKÉHO MLÝNA</div><div class="ped-card-reg">CMKU/CKC/5303/99/00</div><div class="ped-card-detail">Ch.CZ</div></div></div></div></div>
+                      <div class="ped-entry"><div class="ped-entry-inner"><div class="ped-card"><div class="ped-card-role">Great-grandfather</div><div class="ped-card-name">PERCIVAL TWAI Z CISARSKEHO MLYNA</div><div class="ped-card-reg">CMKU 7228/03/05</div><div class="ped-badges"><span class="ped-badge">C.I.B.</span><span class="ped-badge">GR.CH-SK</span><span class="ped-badge">2xKlub.Ch</span><span class="ped-badge">CH-CZ</span><span class="ped-badge">CH-SK</span></div></div><div class="ped-conn"><div class="ped-conn-l"><div class="ped-conn-l-line"></div></div><div class="ped-conn-r"></div></div></div><div class="ped-children"><div class="ped-leaf"><div class="ped-card"><div class="ped-card-role">GG-grandfather</div><div class="ped-card-name">STONEHILL'S WEST SIDE STORY</div><div class="ped-card-reg">SHSB/LOS 565823 (CMKU/CKC/4599/-98/98/99)</div><div class="ped-card-detail">2xCAC CZ</div></div></div><div class="ped-leaf"><div class="ped-card"><div class="ped-card-role">GG-grandmother</div><div class="ped-card-name">AWARA TWAI Z CÍSAŘSKÉHO MLÝNA</div><div class="ped-card-reg">CMKU/CKC/5303/99/00</div><div class="ped-card-detail">Ch.CZ</div></div></div></div></div>
                       <div class="ped-entry"><div class="ped-entry-inner"><div class="ped-card"><div class="ped-card-role">Great-grandmother</div><div class="ped-card-name">LADY ANN VANESSA ATLANTA</div><div class="ped-card-reg">CMKU 8714/05/07</div></div><div class="ped-conn"><div class="ped-conn-l"><div class="ped-conn-l-line"></div></div><div class="ped-conn-r"></div></div></div><div class="ped-children"><div class="ped-leaf"><div class="ped-card"><div class="ped-card-role">GG-grandfather</div><div class="ped-card-name">FLICK BRNO-FROST</div><div class="ped-card-reg">CMKU/CKC/5460/00/02</div><div class="ped-card-detail">Výborná</div></div></div><div class="ped-leaf"><div class="ped-card"><div class="ped-card-role">GG-grandmother</div><div class="ped-card-name">FÄLLDIN TWAI Z CISÁŘSKÉHO MLÝNA</div><div class="ped-card-reg">CMKU/CKC/6094/01/02</div><div class="ped-card-detail">CACIB</div></div></div></div></div>
                     </div></div>
                   </div></div>
@@ -286,7 +286,12 @@
         </div>
       </div>
     </section>
-
+    <div class="lightbox" id="lightbox" role="dialog">
+      <button class="lightbox-close" id="lb-close">&times;</button>
+      <button class="lightbox-btn" id="lb-prev">&#8249;</button>
+      <div class="lightbox-inner"><img id="lb-img" src="" alt=""><p class="lightbox-caption" id="lb-caption"></p></div>
+      <button class="lightbox-btn" id="lb-next">&#8250;</button>
+    </div>
     <footer class="footer">
       <div class="container">
         <div class="footer-grid">

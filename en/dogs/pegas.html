@@ -87,6 +87,7 @@
             <div class="dog-tabs">
               <div class="tabs-nav">
                 <button class="tab-btn active" data-tab="pedigree">Pedigree</button>
+                <button class="tab-btn" data-tab="achievements">Achievements</button>
                 <button class="tab-btn" data-tab="gallery">Gallery</button>
               </div>
 
@@ -329,6 +330,40 @@
                 <p style="margin-top:1rem;font-size:.8rem;color:var(--text-muted);font-style:italic">Pedigree sourced from official kennel records (SK-SKJ / SPKP).</p>
               </div>
 
+              <!-- ACHIEVEMENTS TAB -->
+              <div class="tab-panel" id="tab-achievements">
+                <p class="text-muted italic" style="margin-bottom:1.5rem">Show results and titles of parents and key ancestors</p>
+                <div class="health-grid">
+                  <div class="health-card">
+                    <p class="health-test">Sire &middot; Chianti z Vrchu králů</p>
+                    <p class="health-result clear">CH SK &middot; JCH SK-H &middot; GRCH SK</p>
+                    <p class="health-date">14×CAC &middot; 7×R.CAC &middot; 2×CACIB &middot; 3×BOB &middot; J.BIS III.</p>
+                    <p class="health-date" style="margin-top:.25rem">MVD neg. &middot; EKG neg.</p>
+                  </div>
+                  <div class="health-card">
+                    <p class="health-test">Dam &middot; Celebration Time Royal Gigilo's</p>
+                    <p class="health-result" style="color:var(--gold)">2×CAJC &middot; NFM &middot; NJ ml.</p>
+                    <p class="health-date">MVD neg.</p>
+                  </div>
+                  <div class="health-card">
+                    <p class="health-test">Paternal Grandmother &middot; Kaishmar Karrianna's Dream</p>
+                    <p class="health-result clear">CH MN</p>
+                    <p class="health-date">4×CACIB &middot; 2×R.CACIB &middot; 6×CAC &middot; BOB</p>
+                  </div>
+                  <div class="health-card">
+                    <p class="health-test">Maternal Grandfather &middot; Lanola Roland Garros</p>
+                    <p class="health-result" style="color:var(--gold)">BOB &middot; CACIB &middot; CAC</p>
+                    <p class="health-date">Pat 0 &middot; PHPV/HC 0</p>
+                  </div>
+                  <div class="health-card">
+                    <p class="health-test">Maternal Grandmother &middot; Royal Gigolo's Aura</p>
+                    <p class="health-result clear">CH SRB &middot; HJCH</p>
+                    <p class="health-date">3×CAC &middot; 6×MKSZ CAC &middot; HPJ &middot; Pat 0</p>
+                  </div>
+                </div>
+                <p style="margin-top:1.5rem;font-size:0.84rem;color:var(--text-muted);font-style:italic">Sourced from official kennel club records.</p>
+              </div>
+
               <!-- GALLERY TAB -->
               <div class="tab-panel" id="tab-gallery">
                 <p class="text-muted italic" style="margin-bottom:1.5rem">Click any photo to enlarge</p>
@@ -345,7 +380,12 @@
         </div>
       </div>
     </section>
-
+    <div class="lightbox" id="lightbox" role="dialog">
+      <button class="lightbox-close" id="lb-close">&times;</button>
+      <button class="lightbox-btn" id="lb-prev">&#8249;</button>
+      <div class="lightbox-inner"><img id="lb-img" src="" alt=""><p class="lightbox-caption" id="lb-caption"></p></div>
+      <button class="lightbox-btn" id="lb-next">&#8250;</button>
+    </div>
     <footer class="footer">
       <div class="container">
         <div class="footer-grid">
